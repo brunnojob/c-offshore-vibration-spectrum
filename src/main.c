@@ -18,6 +18,7 @@ static size_t fields(char *line, char **out, size_t capacity) {
     char *p = line;
     while (*p) {
         if (count == capacity) fail("too many fields");
+        if (*p == ',') fail("empty field");
         out[count++] = p;
         char *separator = strchr(p, ',');
         if (!separator) break;
@@ -47,6 +48,7 @@ static Result spectrum(const double *x, size_t n, double rate) {
     return (Result){rms, rms > 0 ? peak / rms : 0, bin * rate / n, best};
 }
 int main(int argc, char **argv) {
+    if (argc > 1 && !(argc == 2 && !strcmp(argv[1], "--self-test"))) fail("unsupported command arguments");
     if (argc == 2 && !strcmp(argv[1], "--self-test")) {
         double x[128]; for (size_t i = 0; i < 128; i++) x[i] = 3 + 2 * sin(2 * acos(-1) * 8 * i / 128);
         Result r = spectrum(x, 128, 128); assert(fabs(r.frequency - 8) < 1e-9); assert(fabs(r.rms - sqrt(2)) < 1e-9);
@@ -54,6 +56,7 @@ int main(int argc, char **argv) {
     }
     double x[4096], time[4096]; size_t n = 0; char line[256];
     while (fgets(line, sizeof line, stdin)) {
+        if (strlen(line) == sizeof line - 1 && line[sizeof line - 2] != '\n') fail("input record too large");
         char *f[2]; if (fields(line, f, 2) != 2 || n == 4096) fail("expected time,acceleration within 4096 samples");
         time[n] = number(f[0]); x[n] = number(f[1]);
         if (n && time[n] <= time[n - 1]) fail("time must increase");
