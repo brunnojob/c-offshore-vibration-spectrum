@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "repository": "brunnojob/c-offshore-vibration-spectrum",
-  "source_commit": "261d7cee7bc64600c30be2b84cc5306c17a4b00c",
-  "generated_at": "2026-10-10T02:37:03.827715+00:00",
-  "run_url": "https://github.com/brunnojob/c-offshore-vibration-spectrum/actions/runs/38017612687",
+  "source_commit": "592695a41d5a0ff5512b7b28b5a2fd553ee9fff5",
+  "generated_at": "2026-10-10T02:45:16.857986+00:00",
+  "run_url": "https://github.com/brunnojob/c-offshore-vibration-spectrum/actions/runs/38018107474",
   "inputs_sha256": {
     ".proof/scenarios.json": "c74b9f4e7699e2fbd8f1be31782eedb1d51ce1da0bbfbb4bf4e2f82d281cab1b",
     "examples/input.txt": "637d921a41d559253be7d39a0a19d10c2bc4ddc67f81729b350259a8409887a8"
@@ -23,7 +23,7 @@
       "exit": 0,
       "expected_exit": 0,
       "passed": true,
-      "seconds": 0.302,
+      "seconds": 0.402,
       "output": "cc -std=c17 -Wall -Wextra -Werror -pedantic -O2 src/main.c -lm -o app\n./app --self-test\nsine and zero tests passed\nrms=0.707107 crest=1.414214 dominant_hz=8.000000 amplitude=0.999960\n",
       "output_sha256": "eb860e2f0d1504cfe70dd6b0629511d869edee848d6b2bc6ad70e3abc2c368c7"
     },
