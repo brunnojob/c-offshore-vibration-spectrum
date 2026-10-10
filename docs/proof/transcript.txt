@@ -1,0 +1,20 @@
+$ bash -e -o pipefail -c make test && ./app < examples/input.txt
+cc -std=c17 -Wall -Wextra -Werror -pedantic -O2 src/main.c -lm -o app
+./app --self-test
+sine and zero tests passed
+rms=0.707107 crest=1.414214 dominant_hz=8.000000 amplitude=0.999960
+
+$ ./app
+rms=0.707107 crest=1.414214 dominant_hz=8.000000 amplitude=0.999960
+
+$ ./app
+at least eight samples required
+
+$ ./app
+invalid finite number
+
+$ ./app --unsupported
+unsupported command arguments
+
+$ ./app
+input record too large
