@@ -1,5 +1,7 @@
 # c-offshore-vibration-spectrum
 
+[View execution evidence](https://brunnojob.github.io/devstart-lab/proofs/c-offshore-vibration-spectrum/) · [Run browser demo](https://brunnojob.github.io/devstart-lab/proofs/c-offshore-vibration-spectrum/demo/)
+
 Extract RMS, crest factor and dominant vibration frequency from uniformly sampled accelerometer captures.
 
 ```sh
