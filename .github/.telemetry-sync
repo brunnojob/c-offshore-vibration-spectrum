@@ -1,4 +1,4 @@
 date=2026-11-20
-seq=1726
-ts=1795200331
-scope=adc-dma
+seq=1727
+ts=1795200335
+scope=bearing-fault
