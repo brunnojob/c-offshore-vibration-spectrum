@@ -1,4 +1,4 @@
 date=2026-11-23
-seq=1921
-ts=1795439353
-scope=filter
+seq=1922
+ts=1795439359
+scope=adc-dma
