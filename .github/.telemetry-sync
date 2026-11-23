@@ -1,4 +1,4 @@
 date=2026-11-23
-seq=2095
-ts=1795440471
-scope=bearing-fault
+seq=2096
+ts=1795440473
+scope=fft-window
