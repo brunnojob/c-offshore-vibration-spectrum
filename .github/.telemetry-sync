@@ -1,4 +1,4 @@
 date=2026-11-23
-seq=675
-ts=1795431174
-scope=fft-window
+seq=676
+ts=1795431176
+scope=adc-dma
