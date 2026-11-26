@@ -1,4 +1,4 @@
 date=2026-11-26
-seq=138
-ts=1795717394
-scope=filter
+seq=139
+ts=1795717398
+scope=fft-window
